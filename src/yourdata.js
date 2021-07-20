@@ -3,123 +3,142 @@ import htmlIcon from "./images/html.svg"
 import cssIcon from "./images/css.svg"
 import reactIcon from "./images/react.svg"
 import jsIcon from "./images/javascript.svg"
-import designIcon from "./images/design.svg"
-import codeIcon from "./images/code.svg"
+import nodejsIcon from "./images/nodejs.svg"
+import mongoIcon from "./images/mongodb.svg"
+import azdoIcon from "./images/azdo.svg"
+import awsIcon from "./images/aws.svg"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
-import codepenIcon from "./images/codepen.svg"
-import dribbbleIcon from "./images/dribbble.svg"
-import instagramIcon from "./images/instagram.svg"
+import linkedinIcon from "./images/linkedin.svg"
 
 export default {
-  //(Please Do Not Remove The comma(,) after every variable)
+
   //Change The Website Template
 
   //   Header Details ---------------------
-  name: "chetan",
+  name: "Braian",
   headerTagline: [
     //Line 1 For Header
-    "Building digital",
+    "Digital solutions,",
     //Line 2 For Header
-    "products, brands,",
+    "identities",
     //Line 3 For Header
-    "and experience",
+    "and experiences",
   ],
   //   Header Paragraph
   headerParagraph:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    "Landing pages, applications and web based solutions just the way you imaginated them.",
 
   //Contact Email
-  contactEmail: "hello@chetanverma.com",
+  contactEmail: "hello@bgigena.com",
 
   // End Header Details -----------------------
 
   // Work Section ------------------------
   projects: [
     {
-      title: "Project One", //Project Title - Add Your Project Title Here
+      title: "Project One", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "Administrador de pacientes", 
       imageSrc:
-        "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/60752687743b7de9233bf4701b0884cdb91840d402314128518ab022ed8be4e9024b8aef.jpg",
+      url: "https://vigilant-wescoff-18d2a0.netlify.app/",
     },
     {
-      title: "Project Two", //Project Title - Add Your Project Title Here
+      title: "Project Two", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "Organizador de presupuesto", 
       imageSrc:
-        "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/67763934362346972c2a32a1e6730511c09b2213b69cb3558fdce9163f664c96d637ff19.jpg",
+      url: "https://thirsty-meitner-169734.netlify.app/",
     },
     {
-      title: "Project Three", //Project Title - Add Your Project Title Here
+      title: "Project Three", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "Cotizador de seguros", 
       imageSrc:
-        "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/07883544fcfe2990e3abb078919216acd60533fe05a84d64a16376955d6c36275013da94.jpg",
+      url: "https://hardcore-sinoussi-21475e.netlify.app/",
     },
     {
-      title: "Project Four", //Project Title - Add Your Project Title Here
+      title: "Project Four", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "API frases random Breaking Bad", 
       imageSrc:
-        "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/8087664707061ffb1c154f5d3eb1e07bcd975d5870a18e718839a101a00c191730aeda04.jpg",
+      url: "https://upbeat-curran-071c7b.netlify.app/",
     },
     {
-      title: "Project Five", //Project Title - Add Your Project Title Here
+      title: "Project Five", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "API con cotización de criptomonedas en varias divisas", 
       imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/77753755731d2d9b472a474b90b1709bc027df7bad6f5f9e077e616017854eacf823b51d.jpg",
+      url: "https://wizardly-blackwell-03570a.netlify.app/",
+    },
+/*     {
+      title: "Project Six", 
+      para:
+        "API con buscador de noticias", 
+      imageSrc:
+        "",
+      
+      url: "https://flamboyant-bell-76ca3e.netlify.app/",
+    }, */
+    {
+      title: "Project Six", 
+      para:
+        "Consume la API de Pixabay para cargar imagenes", 
+      
+      imageSrc:
+        "https://serving.photos.photobox.com/68007330f58944fc6c01335e523c134c1988b57840c9e60f12347f591e3790a4ef3d65f8.jpg",
+      
+      url: "https://agitated-beaver-188a02.netlify.app/",
+    },
+/*     {
+      title: "Project Eight", 
+      para:
+        "Buscador de canciones y letras", 
+      
+      imageSrc:
+        "",
+      
+      url: "https://clever-galileo-f843b7.netlify.app/",
+    }, */
+    {
+      title: "Project Seven", 
+      para:
+        "Buscador de recetas de bebidas", 
+      
+      imageSrc:
+        "https://serving.photos.photobox.com/60166336899f90faf4505990ed80f5370572bfbf106d9acd40e33d62a6dc2311f6c7e67e.jpg",
+      
+      url: "https://mystifying-babbage-0432ca.netlify.app/",
     },
     {
-      title: "Project Six", //Project Title - Add Your Project Title Here
+      title: "Project Eight", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+        "Gestionador de tareas con Login, conexión a base de datos y backend", 
+      
       imageSrc:
-        "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://serving.photos.photobox.com/22234837fbbeb5ea467f3f2c648a7494bc5244f91fd6712d4eaaaef430c7a0d8afd78533.jpg",
+      
+      url: "https://elegant-villani-3d730f.netlify.app/",
     },
-
-    /*
-    If You Want To Add More Project just Copy and Paste This At The End
-    ,{
-        title: 'Project Five',
-        para: 'Something Amazing',
-        imageSrc: "",
-        url: ''
-    }
-    */
   ],
 
   // End Work Section -----------------------
 
   // About Secton --------------
   aboutParaOne:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "32 years old Argentinian, father of a gorgeous boy and husband of an amazing women that pushes me to be the greatest version of myself.",
   aboutParaTwo:
-    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "I've been working for almost 8 years in a top class world software company, before began this trip by my own.",
   aboutParaThree:
-    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "My only mission is to deliver quality, beautiful and user-friendly software to my clients to help them and their bussiness grow",
   aboutImage:
-    "https://images.unsplash.com/photo-1519713958759-6254243c4a53?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+    "https://serving.photos.photobox.com/90625999969fe01967a861d540e44d1ea2620a4dcc66a21bff374619b2c3a9f59814d913.jpg",
 
   //   End About Section ---------------------
 
@@ -131,65 +150,65 @@ export default {
     {
       img: htmlIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "HTML5",
     },
     {
       img: cssIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "CSS3",
     },
     {
       img: jsIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "JavaScript",
     },
     {
       img: reactIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "ReactJS",
     },
     {
-      img: designIcon,
+      img: nodejsIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "NodeJs",
     },
     {
-      img: codeIcon,
+      img: mongoIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "MongoDB",
+    },
+    {
+      img: azdoIcon,
+      para:
+        "Azure DevOps",
+    },
+    {
+      img: awsIcon,
+      para:
+        "Amazon Web Services",
     },
   ],
 
   // End Skills Section --------------------------
 
-  //   Promotion Section --------------------------
+/*   //   Promotion Section --------------------------
 
   promotionHeading: "Heading",
   promotionPara:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   // End Promotion Section -----------------
-
+ */
   //   Contact Section --------------
 
   contactSubHeading: "Let's create your next experience together",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/chetanverma16" },
+    { img: githubIcon, url: "https://github.com/bgigena" },
     {
-      img: codepenIcon,
-      url: "https://www.codepen.com/",
-    },
-    {
-      img: dribbbleIcon,
-      url: "https://dribbble.com/chetanverma",
-    },
-    {
-      img: instagramIcon,
-      url: "https://www.instagram.com/",
+      img: linkedinIcon,
+      url: "https://www.linkedin.com/in/braian-gigena",
     },
   ],
 
   // End Contact Section ---------------
 }
-
-// Thanks for using this template, I would love to hear from you contact me at hello@chetanverma.com
