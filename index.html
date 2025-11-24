@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braian | DevOps & SRE Engineer</title>
+    <meta name="description" content="Portfolio de Braian, Ingeniero DevOps y SRE especializado en automatización, contenedores y nube.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Braian.DevOps</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Construyendo Infraestructura <span class="highlight">Resiliente</span></h1>
+                <p class="subtitle">Ingeniero DevOps / SRE enfocado en eficiencia, seguridad y escalabilidad.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <p>Soy un apasionado por la infraestructura como código y la orquestación de contenedores. Mi enfoque no es solo "hacer que funcione", sino entender profundamente el stack subyacente para optimizar rendimiento y costos.</p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Contenedores</h3>
+                        <p>Docker, Kubernetes, Podman</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>CI/CD</h3>
+                        <p>GitLab CI, GitHub Actions, Jenkins</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>IaC</h3>
+                        <p>Terraform, Ansible</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cloud & On-Prem</h3>
+                        <p>AWS, Linux, Homelab</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3>Portfolio Contenerizado</h3>
+                            <p>Despliegue de este sitio web utilizando Docker con una imagen Nginx Alpine optimizada. Implementación de buenas prácticas de seguridad y rendimiento.</p>
+                            <ul class="tech-stack">
+                                <li>Docker</li>
+                                <li>Nginx</li>
+                                <li>HTML5/CSS3</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="link-btn">Demo</a>
+                                <a href="#" class="link-btn github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Placeholder Proyecto 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3>Blog Full-Stack "Autosuficiente"</h3>
+                            <p>Sistema de blog desplegado con Docker Compose, asegurando persistencia de datos y redes aisladas. (En desarrollo)</p>
+                            <ul class="tech-stack">
+                                <li>Docker Compose</li>
+                                <li>Python/Django</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <span class="status-badge">En Progreso</span>
+                            </div>
+                        </div>
+                    </article>
+
+                     <!-- Placeholder Proyecto 3 -->
+                     <article class="project-card">
+                        <div class="project-content">
+                            <h3>Stack de Monitoreo</h3>
+                            <p>Implementación de Prometheus y Grafana para visualizar métricas de rendimiento del Homelab. (Planificado)</p>
+                            <ul class="tech-stack">
+                                <li>Prometheus</li>
+                                <li>Grafana</li>
+                                <li>Node Exporter</li>
+                            </ul>
+                            <div class="project-links">
+                                <span class="status-badge">Planificado</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Conectemos</h2>
+                <p>Estoy siempre abierto a discutir nuevas oportunidades o colaborar en proyectos interesantes.</p>
+                <a href="mailto:tuemail@ejemplo.com" class="btn primary">Enviar Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Braian. Construido con Docker & Pasión.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
