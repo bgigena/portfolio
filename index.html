@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Braian | DevOps & SRE Engineer</title>
-    <meta name="description" content="Portfolio de Braian, Ingeniero DevOps y SRE especializado en automatización, contenedores y nube.">
+    <meta name="description"
+        content="Portfolio de Braian, Ingeniero DevOps y SRE especializado en automatización, contenedores y nube.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -37,7 +40,9 @@
         <section id="about" class="section">
             <div class="container">
                 <h2>Sobre Mí</h2>
-                <p>Soy un apasionado por la infraestructura como código y la orquestación de contenedores. Mi enfoque no es solo "hacer que funcione", sino entender profundamente el stack subyacente para optimizar rendimiento y costos.</p>
+                <p>Soy un apasionado por la infraestructura como código y la orquestación de contenedores. Mi enfoque no
+                    es solo "hacer que funcione", sino entender profundamente el stack subyacente para optimizar
+                    rendimiento y costos.</p>
                 <div class="skills-grid">
                     <div class="skill-card">
                         <h3>Contenedores</h3>
@@ -65,49 +70,66 @@
                 <div class="projects-grid">
                     <!-- Proyecto 1 -->
                     <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/portfolio-preview.png" alt="Portfolio Preview" class="project-img"
+                                onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Portfolio+Preview'">
+                        </div>
                         <div class="project-content">
                             <h3>Portfolio Contenerizado</h3>
-                            <p>Despliegue de este sitio web utilizando Docker con una imagen Nginx Alpine optimizada. Implementación de buenas prácticas de seguridad y rendimiento.</p>
-                            <ul class="tech-stack">
-                                <li>Docker</li>
-                                <li>Nginx</li>
-                                <li>HTML5/CSS3</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="#" class="link-btn">Demo</a>
-                                <a href="#" class="link-btn github">GitHub</a>
-                            </div>
+                            <p>Sitio web estático servido mediante un contenedor Docker optimizado con Nginx Alpine.
+                                Implementa multi-stage builds para minimizar el tamaño de la imagen (<20MB).< /p>
+                                    <ul class="tech-stack">
+                                        <li>Docker</li>
+                                        <li>Nginx Alpine</li>
+                                        <li>HTML5/CSS3</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <span class="status-badge success">Completado</span>
+                                        <a href="#" class="link-btn github">GitHub</a>
+                                    </div>
                         </div>
                     </article>
-                    
-                    <!-- Placeholder Proyecto 2 -->
+
+                    <!-- Proyecto 2 -->
                     <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/blog-preview.png" alt="Blog Preview" class="project-img"
+                                onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Blog+Preview'">
+                        </div>
                         <div class="project-content">
-                            <h3>Blog Full-Stack "Autosuficiente"</h3>
-                            <p>Sistema de blog desplegado con Docker Compose, asegurando persistencia de datos y redes aisladas. (En desarrollo)</p>
+                            <h3>Blog Full-Stack</h3>
+                            <p>Aplicación Django orquestada con Docker Compose. Incluye base de datos PostgreSQL con
+                                persistencia de datos (Volúmenes) y red interna aislada.</p>
                             <ul class="tech-stack">
                                 <li>Docker Compose</li>
-                                <li>Python/Django</li>
+                                <li>Django 5.0</li>
                                 <li>PostgreSQL</li>
                             </ul>
                             <div class="project-links">
-                                <span class="status-badge">En Progreso</span>
+                                <span class="status-badge success">Completado</span>
+                                <a href="http://localhost:8000" target="_blank" class="link-btn">Demo Local</a>
                             </div>
                         </div>
                     </article>
 
-                     <!-- Placeholder Proyecto 3 -->
-                     <article class="project-card">
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/monitoring-preview.png" alt="Monitoring Preview" class="project-img"
+                                onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Monitoring+Preview'">
+                        </div>
                         <div class="project-content">
-                            <h3>Stack de Monitoreo</h3>
-                            <p>Implementación de Prometheus y Grafana para visualizar métricas de rendimiento del Homelab. (Planificado)</p>
+                            <h3>Stack de Observabilidad</h3>
+                            <p>Solución completa de monitoreo con Prometheus y Grafana. Visualización de métricas de
+                                host (Node Exporter) y contenedores (cAdvisor) en tiempo real.</p>
                             <ul class="tech-stack">
                                 <li>Prometheus</li>
                                 <li>Grafana</li>
-                                <li>Node Exporter</li>
+                                <li>cAdvisor</li>
                             </ul>
                             <div class="project-links">
-                                <span class="status-badge">Planificado</span>
+                                <span class="status-badge success">Completado</span>
+                                <a href="http://localhost:3000" target="_blank" class="link-btn">Grafana</a>
                             </div>
                         </div>
                     </article>
@@ -132,4 +154,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
