@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiMzdmOWU5OWU3NWE4MWRkMDZiZDY5OGM3NmY2MDQ5ZDgiLCJ0IjoiY2M0ZmE4OTYtMDFmNC00MGYxLWE4NmUtZjU4N2YyODczZjhjIiwicyI6Ik1USTVPREl6WVRNdE1tRTNOaTAwWldVMkxUazNZVFV0WVRjME9EVXpaREptT1dRMyJ9
+    # On Windows, 'host' network mode is limited. 
+    # We will use the default bridge and access host services via 'host.docker.internal'
