@@ -23,9 +23,8 @@ services:
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-      - GF_USERS_ALLOW_SIGN_UP=false
+    env_file:
+      - .env
     ports:
       - "3000:3000"
     depends_on:
