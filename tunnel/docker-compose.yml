@@ -5,8 +5,19 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: cloudflared
     restart: unless-stopped
-    command: tunnel run
+    command: tunnel run --token ${TUNNEL_TOKEN}
     env_file:
       - .env
-    # On Windows, 'host' network mode is limited. 
+    ports:
+      - "8080:80"
+    # On Windows, 'host' network mode is limited.
     # We will use the default bridge and access host services via 'host.docker.internal'
+
+  nginx:
+    build: ..
+    container_name: nginx-portfolio
+    restart: unless-stopped
+    ports:
+      - "8888:80"
+    depends_on:
+      - cloudflared
