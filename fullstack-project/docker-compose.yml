@@ -3,11 +3,11 @@ version: '3.8'
 services:
   web:
     build: ./backend
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./backend:/app
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000" # Bind to localhost only
     env_file:
       - .env
     depends_on:

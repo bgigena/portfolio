@@ -9,7 +9,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8080:80"
+      - "127.0.0.1:8080:80" # Bind to localhost only for debugging if needed, or remove entirely.
     # On Windows, 'host' network mode is limited.
     # We will use the default bridge and access host services via 'host.docker.internal'
 
@@ -17,7 +17,8 @@ services:
     build: ..
     container_name: nginx-portfolio
     restart: unless-stopped
-    ports:
-      - "8888:80"
+    # Ports removed to force traffic through the tunnel
+    # ports:
+    #   - "8888:80"
     depends_on:
       - cloudflared
