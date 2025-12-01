@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel run --token ${TUNNEL_TOKEN}
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:8080:80" # Bind to localhost only for debugging if needed, or remove entirely.
+    # On Windows, 'host' network mode is limited.
+    # We will use the default bridge and access host services via 'host.docker.internal'
+
+    # Production Service (Auto-updated by Watchtower)
+  nginx:
+    image: ghcr.io/bgigena/portfolio:latest
+    container_name: nginx-portfolio
+    restart: unless-stopped
+    # Ports removed to force traffic through the tunnel
+    # ports:
+    #   - "8888:80"
+    depends_on:
+      - cloudflared
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  # Staging Service (For testing changes before merging to main)
+  nginx-staging:
+    image: ghcr.io/bgigena/portfolio:staging
+    container_name: nginx-portfolio-staging
+    restart: unless-stopped
+    ports:
+      - "8081:80" # Exposed locally for testing
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  # Watchtower (Auto-updater)
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 --cleanup
+    environment:
+      - REPO_USER=${GHCR_USER}
+      - REPO_PASS=${GHCR_PAT}

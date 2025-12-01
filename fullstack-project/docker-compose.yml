@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./backend
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "127.0.0.1:8000:8000" # Bind to localhost only
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+volumes:
+  pgdata:
