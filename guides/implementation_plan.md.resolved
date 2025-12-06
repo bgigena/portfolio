@@ -1,0 +1,25 @@
+# Revert and Document
+
+Goal: Restore the original portfolio website and provide a guide for future deployments and troubleshooting.
+
+## Proposed Changes
+
+### Content Reversion
+
+#### [MODIFY] [index.html](file:///d:/_DevOps/portfolio/index.html)
+- Replace the current "Fixture Mundial 2026" content with the content from [original_index.html](file:///d:/_DevOps/portfolio/original_index.html).
+
+### Documentation
+
+#### [NEW] [deployment_guide.md](file:///C:/Users/Braian/.gemini/antigravity/brain/0486027b-fddf-4544-8ecc-646c021e455c/deployment_guide.md)
+- Create a comprehensive guide covering:
+    - How the deployment pipeline works (GitHub Actions -> GHCR -> Watchtower).
+    - How to update the website (Git workflow).
+    - Troubleshooting common issues (Branch mismatch, Container logs).
+
+## Verification Plan
+
+### Manual Verification
+1.  **Revert:** I will overwrite [index.html](file:///d:/_DevOps/portfolio/index.html).
+2.  **User Action:** User commits and pushes to `main`.
+3.  **Verify:** User checks the live site to see the original portfolio.

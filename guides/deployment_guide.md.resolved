@@ -1,0 +1,55 @@
+# Deployment Guide for Portfolio Website
+
+This guide explains the deployment architecture, how to update the website, and how to troubleshoot common issues.
+
+## Architecture Overview
+
+1.  **Codebase:** Hosted on GitHub.
+2.  **CI/CD Pipeline:** GitHub Actions ([.github/workflows/ci-cd.yml](file:///d:/_DevOps/portfolio/.github/workflows/ci-cd.yml)) builds a Docker image and pushes it to the GitHub Container Registry (GHCR).
+3.  **Server:** Runs Docker Compose with:
+    *   `nginx-portfolio`: The web server hosting the site.
+    *   `cloudflared`: Exposes the site securely via Cloudflare Tunnel.
+    *   `watchtower`: Automatically updates the `nginx-portfolio` container when a new image is pushed to GHCR.
+
+## How to Update the Website
+
+**Important:** The deployment pipeline ONLY runs on the `main` and `develop` branches.
+
+1.  **Make Changes:** Edit your code locally.
+2.  **Commit:** `git commit -am "Your message"`
+3.  **Push to Main:**
+    ```bash
+    git checkout main
+    git merge <your-feature-branch> # If you were working on another branch
+    git push origin main
+    ```
+4.  **Wait:**
+    *   GitHub Actions will build the new image (approx. 1-2 mins).
+    *   Watchtower (on your server) checks for updates every 30 seconds.
+    *   The site should update automatically within a few minutes.
+
+## Troubleshooting
+
+### 1. Changes are not showing up
+*   **Check the Branch:** Did you push to `main`? (Use `git branch -vv` to check).
+*   **Check GitHub Actions:** Go to the "Actions" tab in your GitHub repo. Did the build succeed?
+*   **Check Watchtower Logs:**
+    ```bash
+    docker logs watchtower
+    ```
+    Look for "Found new image" or authentication errors.
+
+### 2. "Manifest Unknown" Error
+*   This usually means the Docker image doesn't exist for the tag you are trying to pull.
+*   Ensure the CI pipeline finished successfully before trying to pull manually.
+
+### 3. "Invalid Tunnel Secret"
+*   Check your [.env](file:///d:/_DevOps/portfolio/tunnel/.env) file in the `tunnel` directory. Ensure `TUNNEL_TOKEN` is correct.
+
+## Local Development
+To run the site locally with the full stack:
+```bash
+cd tunnel
+docker-compose up -d
+```
+**Note:** You might need to disable `nginx-staging` in [docker-compose.yml](file:///d:/_DevOps/portfolio/tunnel/docker-compose.yml) if you don't have that image built.
