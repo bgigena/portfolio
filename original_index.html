@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braian | DevOps & SRE Engineer</title>
+    <meta name="description"
+        content="Portfolio de Braian, Ingeniero DevOps y SRE especializado en automatización, contenedores y nube.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Braian.DevOps</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Construyendo Infraestructura <span class="highlight">Resiliente</span></h1>
+                <p class="subtitle">Ingeniero DevOps / SRE enfocado en eficiencia, seguridad y escalabilidad.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <p>Soy un apasionado por la infraestructura como código y la orquestación de contenedores. Mi enfoque no
+                    es solo "hacer que funcione", sino entender profundamente el stack subyacente para optimizar
+                    rendimiento y costos.</p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Contenedores</h3>
+                        <p>Docker, Kubernetes, Podman</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>CI/CD</h3>
+                        <p>GitLab CI, GitHub Actions, Jenkins</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>IaC</h3>
+                        <p>Terraform, Ansible</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cloud & On-Prem</h3>
+                        <p>AWS, Linux, Homelab</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/portfolio-preview.png" alt="Portfolio Preview" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Contenerizado</h3>
+                            <p>Sitio web estático servido mediante un contenedor Docker optimizado con Nginx Alpine.
+                                Implementa multi-stage builds para minimizar el tamaño de la imagen (<20MB).< /p>
+                                    <ul class="tech-stack">
+                                        <li>Docker</li>
+                                        <li>Nginx Alpine</li>
+                                        <li>HTML5/CSS3</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <span class="status-badge success">Completado</span>
+                                        <a href="#" class="link-btn github">GitHub</a>
+                                    </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/blog-preview.png" alt="Blog Preview" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blog Full-Stack</h3>
+                            <p>Aplicación Django orquestada con Docker Compose. Incluye base de datos PostgreSQL con
+                                persistencia de datos (Volúmenes) y red interna aislada.</p>
+                            <ul class="tech-stack">
+                                <li>Docker Compose</li>
+                                <li>Django 5.0</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <span class="status-badge success">Completado</span>
+                                <a href="http://localhost:8000" target="_blank" class="link-btn">Demo Local</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+                        <div class="project-img-container">
+                            <img src="images/monitoring-preview.png" alt="Monitoring Preview" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <h3>Stack de Observabilidad</h3>
+                            <p>Solución completa de monitoreo con Prometheus y Grafana. Visualización de métricas de
+                                host (Node Exporter) y contenedores (cAdvisor) en tiempo real.</p>
+                            <ul class="tech-stack">
+                                <li>Prometheus</li>
+                                <li>Grafana</li>
+                                <li>cAdvisor</li>
+                            </ul>
+                            <div class="project-links">
+                                <span class="status-badge success">Completado</span>
+                                <a href="http://localhost:3000" target="_blank" class="link-btn">Grafana</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Conectemos</h2>
+                <p>Estoy siempre abierto a discutir nuevas oportunidades o colaborar en proyectos interesantes.</p>
+                <a href="mailto:tuemail@ejemplo.com" class="btn primary">Enviar Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Braian. Construido con Docker & Pasión.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
