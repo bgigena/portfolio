@@ -15,6 +15,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
+COPY resume.pdf /usr/share/nginx/html/
 COPY images /usr/share/nginx/html/images
 
 # Copy custom nginx config

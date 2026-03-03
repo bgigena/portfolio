@@ -11,144 +11,255 @@
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo">Braian.DevOps</a>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="app-container">
+        <header class="header">
+            <nav class="nav-container">
+                <a href="#" class="logo"><strong>Braian</strong>.DevOps</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-img-container">
+                    <span>BG</span>
+                </div>
+                <h3>Braian Gigena</h3>
+                <span class="handle">@bgigena</span>
+                <div class="social-links">
+                    <a href="https://github.com/bgigena" target="_blank" class="social-btn">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/braian-gigena/" target="_blank" class="social-btn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="resume.pdf" target="_blank" class="social-btn">
+                        <span>Resume</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Location</span>
+                    <span class="stat-value" style="font-size: 0.875rem;">Santa Fe, AR</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Years</span>
+                    <span class="stat-value">12+</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Projects</span>
+                    <span class="stat-value">20+</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="home" class="hero">
                 <h1>Construyendo Infraestructura <span class="highlight">Resiliente</span></h1>
-                <p class="subtitle">Ingeniero DevOps / SRE enfocado en eficiencia, seguridad y escalabilidad.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">Ver Proyectos</a>
-                    <a href="#contact" class="btn secondary">Contactar</a>
-                </div>
-            </div>
-        </section>
+                <p class="subtitle">Ingeniero DevOps / SRE enfocado en eficiencia, seguridad y escalabilidad
+                    empresarial.</p>
+            </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2>Sobre Mí</h2>
-                <p>Soy un apasionado por la infraestructura como código y la orquestación de contenedores. Mi enfoque no
-                    es solo "hacer que funcione", sino entender profundamente el stack subyacente para optimizar
-                    rendimiento y costos.</p>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Contenedores</h3>
-                        <p>Docker, Kubernetes, Podman</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>CI/CD</h3>
-                        <p>GitLab CI, GitHub Actions, Jenkins</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>IaC</h3>
-                        <p>Terraform, Ansible</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Cloud & On-Prem</h3>
-                        <p>AWS, Linux, Homelab</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Proyectos Destacados</h2>
-                <div class="projects-grid">
-                    <!-- Proyecto 1 -->
-                    <article class="project-card">
-                        <div class="project-img-container">
-                            <img src="images/portfolio-preview.png" alt="Portfolio Preview" class="project-img">
+            <section id="projects">
+                <h2 class="section-title">Notable Projects</h2>
+                <div class="projects-list">
+                    <!-- Azure AI -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/azure-ai-preview.png" alt="Azure AI Infrastructure">
                         </div>
-                        <div class="project-content">
+                        <div class="project-info">
+                            <h3>Azure AI Infrastructure</h3>
+                            <p>Reference architecture for GenAI agents on Azure. Implements Zero-Trust security,
+                                Enterprise RAG, and LLMOps observability.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Terraform</span>
+                                <span class="tag">Azure OpenAI</span>
+                                <span class="tag">AI Search</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="project-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MiTurnoApp -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/miturnoapp-preview.png" alt="MiTurnoApp">
+                        </div>
+                        <div class="project-info">
+                            <h3>MiTurnoApp</h3>
+                            <p>Comprehensive appointment booking platform. Streamlines scheduling for service providers
+                                and simplifies booking for clients.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="project-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cagaste Card Game -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/cagaste-preview.png" alt="Cagaste Card Game">
+                        </div>
+                        <div class="project-info">
+                            <h3>Cagaste Card Game</h3>
+                            <p>Fast-paced multiplayer card game. Features real-time interactions, custom game logic, and
+                                a responsive web interface.</p>
+                            <div class="tech-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Vite</span>
+                                <span class="tag">Socket.io</span>
+                                <span class="tag">Zustand</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://cagaste.braiangigena.com.ar/" target="_blank" class="project-btn">Ver
+                                    Proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Portfolio -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/portfolio-preview.png" alt="Portfolio Contenerizado">
+                        </div>
+                        <div class="project-info">
                             <h3>Portfolio Contenerizado</h3>
-                            <p>Sitio web estático servido mediante un contenedor Docker optimizado con Nginx Alpine.
-                                Implementa multi-stage builds para minimizar el tamaño de la imagen (<20MB). </p>
-                                    <ul class="tech-stack">
-                                        <li>Docker</li>
-                                        <li>Nginx Alpine</li>
-                                        <li>HTML5/CSS3</li>
-                                    </ul>
-                                    <div class="project-links">
-                                        <span class="status-badge success">Completado</span>
-                                        <a href="#" class="link-btn github">GitHub</a>
-                                    </div>
-                        </div>
-                    </article>
-
-                    <!-- Proyecto 2 -->
-                    <article class="project-card">
-                        <div class="project-img-container">
-                            <img src="images/blog-preview.png" alt="Blog Preview" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <h3>Blog Full-Stack</h3>
-                            <p>Aplicación Django orquestada con Docker Compose. Incluye base de datos PostgreSQL con
-                                persistencia de datos (Volúmenes) y red interna aislada.</p>
-                            <ul class="tech-stack">
-                                <li>Docker Compose</li>
-                                <li>Django 5.0</li>
-                                <li>PostgreSQL</li>
-                            </ul>
-                            <div class="project-links">
-                                <span class="status-badge success">Completado</span>
-                                <a href="http://localhost:8000" target="_blank" class="link-btn">Demo Local</a>
+                            <p>Optimized static site deployment using Nginx Alpine. Features multi-stage builds and
+                                minimal footprint.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Nginx</span>
+                                <span class="tag">HTML/CSS</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="project-btn">Ver Proyecto</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Proyecto 3 -->
-                    <article class="project-card">
-                        <div class="project-img-container">
-                            <img src="images/monitoring-preview.png" alt="Monitoring Preview" class="project-img">
+                    <!-- Monitoring -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/monitoring-preview.png" alt="Stack de Observabilidad">
                         </div>
-                        <div class="project-content">
+                        <div class="project-info">
                             <h3>Stack de Observabilidad</h3>
-                            <p>Solución completa de monitoreo con Prometheus y Grafana. Visualización de métricas de
-                                host (Node Exporter) y contenedores (cAdvisor) en tiempo real.</p>
-                            <ul class="tech-stack">
-                                <li>Prometheus</li>
-                                <li>Grafana</li>
-                                <li>cAdvisor</li>
-                            </ul>
-                            <div class="project-links">
-                                <span class="status-badge success">Completado</span>
-                                <a href="http://localhost:3000" target="_blank" class="link-btn">Grafana</a>
+                            <p>Full monitoring solution with Prometheus and Grafana. Visualizes host and container
+                                metrics in real-time.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">cAdvisor</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="project-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog -->
+                    <article class="project-item">
+                        <div class="project-img-wrapper">
+                            <img src="images/blog-preview.png" alt="Blog Full-Stack">
+                        </div>
+                        <div class="project-info">
+                            <h3>Blog Full-Stack</h3>
+                            <p>Django application orchestrated with Docker Compose. Includes PostgreSQL persistence and
+                                isolated networks.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Django</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Docker Compose</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="#" class="project-btn">Ver Proyecto</a>
                             </div>
                         </div>
                     </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="section">
+            <section id="experience">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-list">
+                    <div class="exp-item">
+                        <div class="exp-logo"></div>
+                        <div class="exp-details">
+                            <div class="exp-header">
+                                <h4>Lead DevOps Engineer</h4>
+                                <span class="exp-date">Jan 2022 - Present</span>
+                            </div>
+                            <span class="exp-role">Tech Solution Co.</span>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-logo"></div>
+                        <div class="exp-details">
+                            <div class="exp-header">
+                                <h4>Senior SRE Engineer</h4>
+                                <span class="exp-date">Mar 2019 - Dec 2021</span>
+                            </div>
+                            <span class="exp-role">Global Cloud Services</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 class="section-title">Conectemos</h2>
+                <p>Estoy siempre abierto a discutir nuevas oportunidades o colaborar en proyectos desafiantes.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="mailto:braian.gigena@gmail.com" class="social-btn"
+                        style="display: inline-flex; width: auto; padding: 0.75rem 2rem; background: var(--accent); color: var(--bg-primary); border: none;">
+                        Enviar Email
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
             <div class="container">
-                <h2>Conectemos</h2>
-                <p>Estoy siempre abierto a discutir nuevas oportunidades o colaborar en proyectos interesantes.</p>
-                <a href="mailto:tuemail@ejemplo.com" class="btn primary">Enviar Email</a>
+                <p>&copy; 2026 Braian Gigena. Construido con Pasión y Docker.</p>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Braian. Construido con Docker & Pasión.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -8,8 +8,11 @@ services:
     command: tunnel run --token ${TUNNEL_TOKEN}
     env_file:
       - .env
-    ports:
-      - "127.0.0.1:8080:80" # Bind to localhost only for debugging if needed, or remove entirely.
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    # ports:
+    #   - "127.0.0.1:8080:80" # Removed due to conflict with local portfolio container
     # On Windows, 'host' network mode is limited.
     # We will use the default bridge and access host services via 'host.docker.internal'
 
@@ -38,7 +41,7 @@ services:
 
   # Watchtower (Auto-updater)
   watchtower:
-    image: containrrr/watchtower
+    image: containrrr/watchtower:latest
     container_name: watchtower
     restart: unless-stopped
     volumes:
@@ -47,3 +50,4 @@ services:
     environment:
       - WATCHTOWER_REGISTRY_USER=${GHCR_USER}
       - WATCHTOWER_REGISTRY_PASSWORD=${GHCR_PAT}
+      - DOCKER_API_VERSION=1.44
